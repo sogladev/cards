@@ -10,7 +10,6 @@ import Card from "../logic/Card"
 export default class App extends React.Component {
     state = {
         deck: new Deck().fill(),
-        next: new Card(1,1),
         board: new Deck(),
     };
 
@@ -21,7 +20,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <Board next={this.state.next} board={this.state.board}/>
+                <Board board={this.state.board}/>
                 <StatusBar
                     amountInDeck={this.state.deck.amountOfCards}
                     amountOnBoard={this.state.board.amountOfCards}

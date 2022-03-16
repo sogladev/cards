@@ -6,8 +6,7 @@ export default function manipulateDeck(obj, buttonName) {
     console.log("new deck");
     return {
        deck: new Deck().fill(),
-        board: new Deck(),
-        next: null,
+       board: new Deck(),
     };
   }
 
@@ -15,17 +14,15 @@ export default function manipulateDeck(obj, buttonName) {
       if (obj.deck.isEmpty){
           console.log("deck is empty!")
           return {
-            next: obj.next,
             deck: obj.deck,
             board: obj.board,
           }
       }
       console.log("draw");
-      const next = obj.deck.deal()
+      const dealtCard = obj.deck.deal()
       return {
-        next: next,
         deck: obj.deck,
-        board: obj.board.add(next),
+        board: obj.board.add(dealtCard),
       };
   }
 
@@ -34,7 +31,6 @@ export default function manipulateDeck(obj, buttonName) {
       return {
           deck: obj.deck.shuffle(),
           board: obj.board,
-          next: null,
       };
   }
 }
