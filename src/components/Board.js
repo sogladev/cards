@@ -5,12 +5,12 @@ export default class Board extends React.Component {
   render() {
     return (
       <View style={BoardStyle.container}>
-        Board Board Board Board Board Board Board Board Board Board Board
-        Board Board Board Board Board Board Board Board Board Board Board
-        Board Board Board Board Board Board Board Board Board Board Board
-        Board Board Board Board Board Board Board Board Board Board Board
-        Board Board Board Board Board Board Board Board Board Board Board
-        Board Board Board Board Board Board Board Board Board Board Board
+        Board Test  Board Board Board Board Board Board Board Board Board
+        Board Test  Board Board Board Board Board Board Board Board Board
+        Board Test  Board Board Board Board Board Board Board Board Board
+        Board Test  Board Board Board Board Board Board Board Board Board
+        Board Test  Board Board Board Board Board Board Board Board Board
+        Board Test  Board Board Board Board Board Board Board Board Board
       </View>
     );
   }
