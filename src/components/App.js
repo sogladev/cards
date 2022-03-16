@@ -4,15 +4,15 @@ import Board from "./Board";
 import Menu from "./Menu";
 import StatusBar from "./StatusBar";
 import manipulateDeck from "../logic/manipulateDeck"
+import Deck from "../logic/Deck"
+import Card from "../logic/Card"
 
 export default class App extends React.Component {
     state = {
-        deck: ['King of Hearts', 'King of Clubs', 'Queen of Clubs', 'King of Spades', 'Ace of Spades'],
-        next: 'Ace of Clubs',
-        board: ['Two of Clubs', 'Five of Clubs', 'Six of Hearts'],
+        deck: new Deck().fill(),
+        next: new Card(1,1),
+        board: new Deck(),
     };
-
-    get amountOfCards() {return this.state.deck.length}
 
     handleClick = buttonName => {
         this.setState(manipulateDeck(this.state, buttonName));
@@ -22,7 +22,10 @@ export default class App extends React.Component {
         return (
             <div className="App">
                 <Board next={this.state.next} board={this.state.board}/>
-                <StatusBar amountOfCards={this.amountOfCards}/>
+                <StatusBar
+                    amountInDeck={this.state.deck.amountOfCards}
+                    amountOnBoard={this.state.board.amountOfCards}
+                />
                 <Menu clickHandler={this.handleClick}/>
             </div>
       );

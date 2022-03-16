@@ -5,7 +5,7 @@ export default class Board extends React.Component {
   render() {
     return (
       <View style={BoardStyle.container}>
-        { this.props.board.map( x => <p key={x}>{x}</p>) }
+        { this.props.board.deck.map( card => <p key={card.toString()}>{card.toString()}</p>) }
       </View>
     );
   }
