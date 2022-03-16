@@ -1,30 +1,19 @@
 import React from 'react';
 import { View } from 'react-native';
-import MenuButton from './MenuButton';
-
-function drawCard(e){
-    e.preventDefault();
-    console.log("draw a card")
-}
-
-function shuffleDeck(e){
-    e.preventDefault();
-    console.log("shuffle deck")
-}
-
-function newDeck(e){
-    e.preventDefault();
-    console.log("Create new deck")
-}
+import Button from './Button';
 
 export default class Menu extends React.Component {
+  handleClick = buttonName => {
+      this.props.clickHandler(buttonName);
+  };
+
   render() {
       return (
           <View style={MenuStyle.container}>
-            <MenuButton text="Draw" onClick={ drawCard }/>
-            <MenuButton text="Draw <n>" onClick={ drawCard }/>
-            <MenuButton text="Shuffle remaining" onClick={ shuffleDeck }/>
-            <MenuButton text="New deck" onClick={ newDeck }/>
+            <Button name="Draw" clickHandler={ this.handleClick }/>
+            <Button name="Draw <n>" clickHandler={ this.handleClick }/>
+            <Button name="Shuffle remaining" clickHandler={ this.handleClick }/>
+            <Button name="New deck" clickHandler={ this.handleClick }/>
           </View>
       );
   }
