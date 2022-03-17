@@ -7,11 +7,9 @@ export default class Deck {
         return this;
     }
 
-    add(card) {
-        this.deck.push(card);
-        return this
-    }
+    get amountOfCards() {return this.deck.length};
 
+    get isEmpty() {return this.deck.length <= 0};
 
     fill(numOfJokers=0) {
         const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -29,19 +27,26 @@ export default class Deck {
         return this
     }
 
-
-    get amountOfCards() {return this.deck.length};
-
-    get isEmpty() {return this.deck.length <= 0};
-
     shuffle() {
         this.deck.sort( () => Math.random() - 0.5 );
         return this
     }
 
     deal() {
+        if (this.isEmpty){
+            console.log(`The deck is empty!`);
+            return
+        }
         const dealtCard = this.deck.pop();
         console.log(`Dealt a card. The deck has ${this.deck.length} cards left`);
         return dealtCard;
     }
+
+    add(card) {
+        if (typeof card == 'Card'){
+            this.deck.push(card);
+        }
+        return this
+    }
+
 }

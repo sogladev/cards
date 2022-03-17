@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import Button from './Button';
+import InputNumberCards  from './InputNumberCards';
 
 export default class Menu extends React.Component {
   handleClick = buttonName => {
@@ -11,8 +12,10 @@ export default class Menu extends React.Component {
       return (
           <View style={MenuStyle.container}>
             <Button name="Draw" clickHandler={ this.handleClick }/>
-            <Button name="Draw <n>" clickHandler={ this.handleClick }/>
-            <Button name="Shuffle remaining" clickHandler={ this.handleClick }/>
+            <InputNumberCards
+              name="Draw <n>" clickHandler={ this.handleClick }
+            />
+            <Button name="Shuffle deck" clickHandler={ this.handleClick }/>
             <Button name="New deck" clickHandler={ this.handleClick }/>
           </View>
       );
