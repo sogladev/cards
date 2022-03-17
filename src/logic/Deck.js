@@ -43,7 +43,7 @@ export default class Deck {
     }
 
     add(card) {
-        if (typeof card == 'Card'){
+        if (card instanceof Card){
             this.deck.push(card);
         }
         return this
