@@ -14,14 +14,10 @@ export default class StatusBar extends React.Component {
 
 const StatusBarStyle = {
   container: {
-    position: 'absolute',
-    height: 50,
-    left: 0,
-    right: 0,
+     height: 50,
     paddingTop: 0,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'left',
-    backgroundColor: 'rgba(55, 55, 55, 0.6)',
+     flexDirection: 'row',
+     justifyContent: 'space-evenly',
+     backgroundColor: 'rgba(55, 55, 55, 0.6)',
     },
 }

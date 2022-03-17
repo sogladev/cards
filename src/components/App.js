@@ -19,11 +19,11 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <Board board={this.state.board}/>
                 <StatusBar
                     amountInDeck={this.state.deck.amountOfCards}
                     amountOnBoard={this.state.board.amountOfCards}
                 />
+                <Board board={this.state.board}/>
                 <Menu clickHandler={this.handleClick}/>
             </div>
       );
