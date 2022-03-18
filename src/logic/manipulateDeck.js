@@ -7,6 +7,7 @@ export default function manipulateDeck(obj, buttonName) {
     return {
        deck: new Deck().fill(),
        board: new Deck(),
+       amountOfCardsDrawn: 0,
     };
   }
 
@@ -17,10 +18,12 @@ export default function manipulateDeck(obj, buttonName) {
           return {
             deck: obj.deck,
             board: obj.board,
+            amountOfCardsDrawn: 0,
           }
       }
       const n = buttonName.match('[0-9]+')[0]
       console.log(`draw ${n} cards`);
+      const amountOfCardsBefore = obj.deck.amountOfCards
       for (let i=0; i<n; i++){
         const dealtCard = obj.deck.deal()
         obj.board.add(dealtCard)
@@ -28,6 +31,7 @@ export default function manipulateDeck(obj, buttonName) {
       return {
         deck: obj.deck,
         board: obj.board,
+        amountOfCardsDrawn: amountOfCardsBefore - obj.deck.amountOfCards,
       };
   }
 
@@ -37,6 +41,7 @@ export default function manipulateDeck(obj, buttonName) {
           return {
             deck: obj.deck,
             board: obj.board,
+            amountOfCardsDrawn: 0,
           }
       }
       console.log("draw");
@@ -44,6 +49,7 @@ export default function manipulateDeck(obj, buttonName) {
       return {
         deck: obj.deck,
         board: obj.board.add(dealtCard),
+        amountOfCardsDrawn: 1,
       };
   }
  

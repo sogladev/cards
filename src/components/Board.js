@@ -5,26 +5,41 @@ export default class Board extends React.Component {
   render() {
     return (
       <View style={BoardTwoColumns} >
-      <View style={BoardStyleLeft} >
-        { this.props.board.deck.map( card =>
-            <Text
-                style={TextStyleLeft} key={card.toString()}>{card.toString()}
-            </Text>
-            )
-        }
-      </View>
-
-      <View style={BoardStyleRight} >
-        { this.props.board.deck.map( card =>
-            <Text
-                style={TextStyleRight} key={card.toString()}>{card.toString()}
-            </Text>
-            )
-        }
-      </View>
+        { console.log(`Deck outside: ${this.props.board.deck}`) }
+         <View style={BoardStyleLeft} >
+          <Cards
+            deck={this.props.board.deck}
+            n={this.props.amountOfCardsDrawn}
+            isJustDrawn={true}
+          />
+        </View>
+        <View style={BoardStyleRight} >
+          <Cards
+            deck={this.props.board.deck}
+            n={this.props.amountOfCardsDrawn}
+            isJustDrawn={false}
+          />
+        </View>
       </View>
     );
   }
+}
+
+function Cards({deck,n,isJustDrawn}){
+  if (isJustDrawn){
+    if (n == 0){ return ''}
+    deck = deck.slice(-n);
+  }
+  else {
+    if (n > 0){
+      deck = deck.slice(0,-n);
+    }
+  }
+  return deck.map( card =>
+    <Text
+        style={TextStyleRight} key={card.toString()}>{card.toString()}
+    </Text>
+  )
 }
 
 const TextStyleLeft = {

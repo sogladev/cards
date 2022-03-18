@@ -10,6 +10,7 @@ export default class App extends React.Component {
     state = {
         deck: new Deck().fill(),
         board: new Deck(),
+        amountOfCardsDrawn: 0,
     };
 
     handleClick = buttonName => {
@@ -23,7 +24,10 @@ export default class App extends React.Component {
                     amountInDeck={this.state.deck.amountOfCards}
                     amountOnBoard={this.state.board.amountOfCards}
                 />
-                <Board board={this.state.board}/>
+                <Board
+                    board={this.state.board}
+                    amountOfCardsDrawn={this.state.amountOfCardsDrawn}
+                />
                 <Menu clickHandler={this.handleClick}/>
             </div>
       );
