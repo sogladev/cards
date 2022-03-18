@@ -26,7 +26,7 @@ export default class Board extends React.Component {
 }
 
 function Cards({deck,n,isJustDrawn}){
-  let styleDirection = isJustDrawn ? TextStyleLeft : TextStyleRight;
+  const styleDirection = isJustDrawn ? TextStyleLeft : TextStyleRight;
   if (isJustDrawn){
     if (n === 0){return ''}
     deck = deck.slice(-n);
