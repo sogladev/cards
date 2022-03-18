@@ -10,6 +10,7 @@ export default class App extends React.Component {
     state = {
         deck: new Deck().fill(),
         board: new Deck(),
+        hand: new Deck(),
         amountOfCardsDrawn: 0,
     };
 

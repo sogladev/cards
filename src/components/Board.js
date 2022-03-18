@@ -5,8 +5,8 @@ import SvgCards from '../../node_modules/svg-cards/svg-cards.svg'
 export default class Board extends React.Component {
   render() {
     return (
-      <View style={BoardTwoColumns} >
-<View style={{width:300}}>
+      <View style={BoardColumns} >
+  <View style={BoardStyleLeft} >
 
 
  <svg 
@@ -20,9 +20,9 @@ export default class Board extends React.Component {
   <use xlinkHref={`${SvgCards}#back`} x="00" y="0" />
   </svg>
 
-    </View>
+      </View>
         { console.log(`Deck outside: ${this.props.board.deck}`) }
-         <View style={BoardStyleLeft} >
+         <View style={BoardStyleMiddle} >
           <Cards
             deck={this.props.board.deck}
             n={this.props.amountOfCardsDrawn}
@@ -60,35 +60,44 @@ function Cards({deck,n,isJustDrawn}){
 const TextStyleLeft = {
     width: '50%',
     alignItems: 'stretch',
-    backgroundColor: 'powderblue',
+    backgroundColor: '#DDDDDD', // silver
 };
 
 
 const TextStyleRight = {
     width: '33%',
     alignItems: 'stretch',
-    backgroundColor: 'powderblue',
+    backgroundColor: '#DDDDDD', // silver
 };
 
 const BoardStyleRight = {
     flexDirection:'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    width: '50%',
+    alignContent: 'space-around',
+    backgroundColor: '#01FF70', // lime
+}
+
+const BoardStyleMiddle = {
+    flexDirection:'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
     width: '40%',
     alignContent: 'space-around',
-    backgroundColor: 'blue',
+    backgroundColor: '#2ECC40', // green
 }
 
 const BoardStyleLeft = {
     flexDirection:'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    width: '60%',
+    width: '10%',
     alignContent: 'stretch',
-    backgroundColor: 'red',
+    backgroundColor: '#3D9970', // olive
 }
 
-const BoardTwoColumns = {
+const BoardColumns = {
     flexDirection:'row',
     position: 'absolute',
     left:0,
