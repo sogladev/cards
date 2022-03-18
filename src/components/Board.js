@@ -20,35 +20,23 @@ export default class Board extends React.Component {
           </svg>
         </View>
         <View style={BoardStyleMiddle} >
-          <Deck style={TextStyleLeft} deck={this.props.hand}/> 
+          <Deck cardArray={this.props.hand}/> 
         </View>
         <View style={BoardStyleRight} >
-          <Deck style={TextStyleRight} deck={this.props.board}/> 
+          <Deck cardArray={this.props.board}/> 
         </View>
       </View>
     );
   }
 }
 
-const TextStyleLeft = {
-    width: '50%',
-    alignItems: 'stretch',
-    backgroundColor: '#DDDDDD', // silver
-};
-
-const TextStyleRight = {
-    width: '33%',
-    alignItems: 'stretch',
-    backgroundColor: '#DDDDDD', // silver
-};
-
-const BoardStyleRight = {
+const BoardStyleLeft = {
     flexDirection:'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    width: '50%',
-    alignContent: 'space-around',
-    backgroundColor: '#01FF70', // lime
+    width: '10%',
+    alignContent: 'stretch',
+    backgroundColor: '#3D9970', // olive
 }
 
 const BoardStyleMiddle = {
@@ -60,13 +48,13 @@ const BoardStyleMiddle = {
     backgroundColor: '#2ECC40', // green
 }
 
-const BoardStyleLeft = {
+const BoardStyleRight = {
     flexDirection:'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    width: '10%',
-    alignContent: 'stretch',
-    backgroundColor: '#3D9970', // olive
+    width: '50%',
+    alignContent: 'space-around',
+    backgroundColor: '#01FF70', // lime
 }
 
 const BoardColumns = {

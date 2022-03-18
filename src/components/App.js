@@ -3,18 +3,18 @@ import React from 'react';
 import Board from "./Board";
 import Menu from "./Menu";
 import StatusBar from "./StatusBar";
-import manipulateDeck from "../logic/manipulateDeck"
-import Deck from "./Deck"
+import manipulateCardArray from "../logic/manipulateCardArray"
+import CardArray from "../logic/CardArray"
 
 export default class App extends React.Component {
     state = {
-        deck: new Deck().fill(),
-        hand: new Deck(),
-        board: new Deck(),
+        deck: new CardArray().fill(),
+        hand: new CardArray(),
+        board: new CardArray(),
     };
 
     handleClick = buttonName => {
-        this.setState(manipulateDeck(this.state, buttonName));
+        this.setState(manipulateCardArray(this.state, buttonName));
     };
 
 

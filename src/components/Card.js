@@ -1,9 +1,18 @@
-export default class Card {
-    constructor(num, suit) {
-        this.num = num;
-        this.suit = suit;
-    }
-    toString() {
-        return `${this.num}.${this.suit}`
+import React from "react";
+import { Text } from 'react-native';
+
+export default class Card extends React.Component {
+    render(){
+        return( 
+            <Text key={this.props.index} style={TextStyle}>
+                {this.props.index}
+            </Text>
+        )
     }
 }
+
+const TextStyle = {
+    width: '50%',
+    alignItems: 'stretch',
+    backgroundColor: '#DDDDDD', // silver
+};
