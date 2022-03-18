@@ -414,3 +414,6 @@ export function lookupDB(data){
   );
   return results
 }
+export function index2SVG(index){
+  return db[index-1].svg
+}

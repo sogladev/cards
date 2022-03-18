@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from 'react-native';
 import SvgCards from '../../node_modules/svg-cards/svg-cards.svg';
-import { lookupDB } from '../logic/translateCardIndex';
+import { index2SVG } from '../logic/translateCardIndex';
 
 export default class Card extends React.Component {
     render(){
@@ -12,7 +12,7 @@ export default class Card extends React.Component {
 }
 
 function drawCard(index){
-    const svgPostfix = lookupDB({'index': index})[0].svg
+    const svgPostfix = index2SVG(index)
     return (
         <svg 
             width="175"
