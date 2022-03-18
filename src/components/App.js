@@ -4,7 +4,7 @@ import Board from "./Board";
 import Menu from "./Menu";
 import StatusBar from "./StatusBar";
 import manipulateDeck from "../logic/manipulateDeck"
-import Deck from "../logic/Deck"
+import Deck from "./Deck"
 
 export default class App extends React.Component {
     state = {

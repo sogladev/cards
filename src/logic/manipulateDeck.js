@@ -1,4 +1,4 @@
-import Deck from './Deck.js'
+import Deck from '../components/Deck'
 
 export default function manipulateDeck(obj, buttonName) {
   console.log(`new manipulateDeck: ${buttonName}`);

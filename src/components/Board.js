@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import SvgCards from '../../node_modules/svg-cards/svg-cards.svg'
+import { View } from 'react-native';
+import SvgCards from '../../node_modules/svg-cards/svg-cards.svg';
+import Deck from "./Deck"
 
 export default class Board extends React.Component {
   render() {
@@ -19,29 +20,14 @@ export default class Board extends React.Component {
           </svg>
         </View>
         <View style={BoardStyleMiddle} >
-          <Cards
-            deck={this.props.hand}
-            isHand={true}
-          />
+          <Deck style={TextStyleLeft} deck={this.props.hand}/> 
         </View>
         <View style={BoardStyleRight} >
-          <Cards
-            deck={this.props.board}
-            isHand={false}
-          />
+          <Deck style={TextStyleRight} deck={this.props.board}/> 
         </View>
       </View>
     );
   }
-}
-
-function Cards({deck,isHand}){
-  const styleDirection = isHand ? TextStyleLeft : TextStyleRight;
-  return deck.cards.map(card =>
-    <Text
-        style={styleDirection} key={card.toString()}>{card.toString()}
-    </Text>
-  )
 }
 
 const TextStyleLeft = {
@@ -49,7 +35,6 @@ const TextStyleLeft = {
     alignItems: 'stretch',
     backgroundColor: '#DDDDDD', // silver
 };
-
 
 const TextStyleRight = {
     width: '33%',
