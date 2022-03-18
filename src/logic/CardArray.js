@@ -10,7 +10,7 @@ export default class CardArray {
 
     fill(numOfJokers=0) {
         const numOfCards = 52 + numOfJokers
-        for (let i=0; i<numOfCards; i++){
+        for (let i=1; i<=numOfCards; i++){
             this.cards.push(i);
         }
         console.log(

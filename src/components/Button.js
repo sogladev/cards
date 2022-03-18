@@ -18,6 +18,6 @@ const ButtonStyle = {
     alignSelf: 'stretch',
     color: '#fff',
     backgroundColor: '#28fb43',
-    borderRadius: 10,
+    borderRadius: 15,
 };
 
