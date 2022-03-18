@@ -5,31 +5,35 @@ export default function manipulateDeck(obj, buttonName) {
   if (buttonName === "New deck") {
     return {
        deck: new Deck().fill(),
+       hand: new Deck(),
        board: new Deck(),
-       amountOfCardsDrawn: 0,
     };
   }
 
-  if (/Draw+/.test(buttonName)) {
+  if (/^Draw+/.test(buttonName)) {
       const n = /[0-9]+/.test(buttonName) ? buttonName.match(/[0-9]+/)[0] : 1
       console.log(`draw ${n} card(s)`);
-      const amountOfCardsBefore = obj.deck.amountOfCards
+      for (let i=0; i < obj.hand.amountOfCards; i++){
+        const dealtCard = obj.hand.deal()
+        obj.board.add(dealtCard)
+      }
       for (let i=0; i<n; i++){
         const dealtCard = obj.deck.deal()
-        obj.board.add(dealtCard)
+        obj.hand.add(dealtCard)
       }
       return {
         deck: obj.deck,
+        hand: obj.hand,
         board: obj.board,
-        amountOfCardsDrawn: amountOfCardsBefore - obj.deck.amountOfCards,
       };
   }
  
   if (buttonName === "Shuffle deck") {
       console.log("Shuffle deck");
       return {
-          deck: obj.deck.shuffle(),
-          board: obj.board,
+        deck: obj.deck.shuffle(),
+        hand: obj.hand,
+        board: obj.board,
       };
   }
 }

@@ -6,33 +6,28 @@ export default class Board extends React.Component {
   render() {
     return (
       <View style={BoardColumns} >
-  <View style={BoardStyleLeft} >
-
-
- <svg 
-      width="600"
-      height="400"
-      xmlns="http://www.w3.org/2000/svg"
-      transform="scale(0.4)"
-  >
-  <use xlinkHref={`${SvgCards}#back`} x="20" y="0" />
-  <use xlinkHref={`${SvgCards}#back`} x="10" y="0" />
-  <use xlinkHref={`${SvgCards}#back`} x="00" y="0" />
-  </svg>
-
-      </View>
-         <View style={BoardStyleMiddle} >
+        <View style={BoardStyleLeft} >
+          <svg 
+                width="600"
+                height="400"
+                xmlns="http://www.w3.org/2000/svg"
+                transform="scale(0.4)"
+            >
+            <use xlinkHref={`${SvgCards}#back`} x="20" y="0" />
+            <use xlinkHref={`${SvgCards}#back`} x="10" y="0" />
+            <use xlinkHref={`${SvgCards}#back`} x="00" y="0" />
+          </svg>
+        </View>
+        <View style={BoardStyleMiddle} >
           <Cards
-            deck={this.props.board.deck}
-            n={this.props.amountOfCardsDrawn}
-            isJustDrawn={true}
+            deck={this.props.hand}
+            isHand={true}
           />
         </View>
         <View style={BoardStyleRight} >
           <Cards
-            deck={this.props.board.deck}
-            n={this.props.amountOfCardsDrawn}
-            isJustDrawn={false}
+            deck={this.props.board}
+            isHand={false}
           />
         </View>
       </View>
@@ -40,16 +35,9 @@ export default class Board extends React.Component {
   }
 }
 
-function Cards({deck,n,isJustDrawn}){
-  const styleDirection = isJustDrawn ? TextStyleLeft : TextStyleRight;
-  if (isJustDrawn){
-    if (n === 0){return ''}
-    deck = deck.slice(-n);
-  }
-  else {
-    deck = n === 0 ? deck : deck.slice(0,-n)
-  }
-  return deck.map(card =>
+function Cards({deck,isHand}){
+  const styleDirection = isHand ? TextStyleLeft : TextStyleRight;
+  return deck.cards.map(card =>
     <Text
         style={styleDirection} key={card.toString()}>{card.toString()}
     </Text>

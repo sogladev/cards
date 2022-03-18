@@ -6,6 +6,7 @@ export default class StatusBar extends React.Component {
     return (
       <View style={StatusBarStyle.container}>
             <p>Cards remaining in deck: {this.props.amountInDeck}</p>
+            <p>Cards in hand: {this.props.amountInHand}</p>
             <p>Cards on board: {this.props.amountOnBoard}</p>
       </View>
     );
