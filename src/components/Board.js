@@ -26,9 +26,11 @@ export default class Board extends React.Component {
 }
 
 function Cards({deck,n,isJustDrawn}){
+  let styleDirection = TextStyleRight
   if (isJustDrawn){
-    if (n == 0){ return ''}
+    if (n === 0){ return ''}
     deck = deck.slice(-n);
+    styleDirection = TextStyleLeft
   }
   else {
     if (n > 0){
@@ -37,7 +39,7 @@ function Cards({deck,n,isJustDrawn}){
   }
   return deck.map( card =>
     <Text
-        style={TextStyleRight} key={card.toString()}>{card.toString()}
+        style={styleDirection} key={card.toString()}>{card.toString()}
     </Text>
   )
 }
