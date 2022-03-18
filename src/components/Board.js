@@ -1,78 +1,41 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import Deck from "./Deck"
 
 export default class Board extends React.Component {
   render() {
     return (
-      <View style={BoardTwoColumns} >
-        { console.log(`Deck outside: ${this.props.board.deck}`) }
-         <View style={BoardStyleLeft} >
-          <Cards
-            deck={this.props.board.deck}
-            n={this.props.amountOfCardsDrawn}
-            isJustDrawn={true}
-          />
+      <View style={BoardColumns} >
+        <View style={BoardStyleLeft} >
+          <Deck cardArray={this.props.deck} isFaceUp={false}/>
+        </View>
+        <View style={BoardStyleMiddle} >
+          <Deck cardArray={this.props.hand} isFaceUp={true}/> 
         </View>
         <View style={BoardStyleRight} >
-          <Cards
-            deck={this.props.board.deck}
-            n={this.props.amountOfCardsDrawn}
-            isJustDrawn={false}
-          />
+          <Deck cardArray={this.props.board} isFaceUp={true}/> 
         </View>
       </View>
     );
   }
 }
 
-function Cards({deck,n,isJustDrawn}){
-  const styleDirection = isJustDrawn ? TextStyleLeft : TextStyleRight;
-  if (isJustDrawn){
-    if (n === 0){return ''}
-    deck = deck.slice(-n);
-  }
-  else {
-    deck = n === 0 ? deck : deck.slice(0,-n)
-  }
-  return deck.map(card =>
-    <Text
-        style={styleDirection} key={card.toString()}>{card.toString()}
-    </Text>
-  )
+const BoardStyleLeft = {
+  flex: '11',
+    backgroundColor: '#329062', // darker olive
 }
 
-const TextStyleLeft = {
-    width: '50%',
-    alignItems: 'stretch',
-    backgroundColor: 'powderblue',
-};
-
-
-const TextStyleRight = {
-    width: '33%',
-    alignItems: 'stretch',
-    backgroundColor: 'powderblue',
-};
+const BoardStyleMiddle = {
+  flex: '24',
+    backgroundColor: '#2ECC40', // green
+}
 
 const BoardStyleRight = {
-    flexDirection:'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    width: '40%',
-    alignContent: 'space-around',
-    backgroundColor: 'blue',
+  flex: '24',
+    backgroundColor: '#01FF70', // lime
 }
 
-const BoardStyleLeft = {
-    flexDirection:'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    width: '60%',
-    alignContent: 'stretch',
-    backgroundColor: 'red',
-}
-
-const BoardTwoColumns = {
+const BoardColumns = {
     flexDirection:'row',
     position: 'absolute',
     left:0,
