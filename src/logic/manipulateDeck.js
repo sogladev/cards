@@ -3,7 +3,6 @@ import Deck from './Deck.js'
 export default function manipulateDeck(obj, buttonName) {
   console.log(`new manipulateDeck: ${buttonName}`);
   if (buttonName === "New deck") {
-    console.log("new deck");
     return {
        deck: new Deck().fill(),
        board: new Deck(),

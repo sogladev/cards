@@ -21,7 +21,6 @@ export default class Board extends React.Component {
   </svg>
 
       </View>
-        { console.log(`Deck outside: ${this.props.board.deck}`) }
          <View style={BoardStyleMiddle} >
           <Cards
             deck={this.props.board.deck}
