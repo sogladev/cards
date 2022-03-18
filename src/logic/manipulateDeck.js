@@ -11,18 +11,9 @@ export default function manipulateDeck(obj, buttonName) {
     };
   }
 
-
-  if (buttonName.match("Draw <[0-9]+>")) {
-      if (obj.deck.isEmpty){
-          console.log("deck is empty!")
-          return {
-            deck: obj.deck,
-            board: obj.board,
-            amountOfCardsDrawn: 0,
-          }
-      }
-      const n = buttonName.match('[0-9]+')[0]
-      console.log(`draw ${n} cards`);
+  if (/Draw+/.test(buttonName)) {
+      const n = /[0-9]+/.test(buttonName) ? buttonName.match(/[0-9]+/)[0] : 1
+      console.log(`draw ${n} card(s)`);
       const amountOfCardsBefore = obj.deck.amountOfCards
       for (let i=0; i<n; i++){
         const dealtCard = obj.deck.deal()
@@ -34,26 +25,7 @@ export default function manipulateDeck(obj, buttonName) {
         amountOfCardsDrawn: amountOfCardsBefore - obj.deck.amountOfCards,
       };
   }
-
-  if (buttonName === "Draw") {
-      if (obj.deck.isEmpty){
-          console.log("deck is empty!")
-          return {
-            deck: obj.deck,
-            board: obj.board,
-            amountOfCardsDrawn: 0,
-          }
-      }
-      console.log("draw");
-      const dealtCard = obj.deck.deal()
-      return {
-        deck: obj.deck,
-        board: obj.board.add(dealtCard),
-        amountOfCardsDrawn: 1,
-      };
-  }
  
-
   if (buttonName === "Shuffle deck") {
       console.log("Shuffle deck");
       return {
