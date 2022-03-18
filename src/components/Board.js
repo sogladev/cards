@@ -1,10 +1,26 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import SvgCards from '../../node_modules/svg-cards/svg-cards.svg'
 
 export default class Board extends React.Component {
   render() {
     return (
       <View style={BoardTwoColumns} >
+<View style={{width:300}}>
+
+
+ <svg 
+      width="600"
+      height="400"
+      xmlns="http://www.w3.org/2000/svg"
+      transform="scale(0.4)"
+  >
+  <use xlinkHref={`${SvgCards}#back`} x="20" y="0" />
+  <use xlinkHref={`${SvgCards}#back`} x="10" y="0" />
+  <use xlinkHref={`${SvgCards}#back`} x="00" y="0" />
+  </svg>
+
+    </View>
         { console.log(`Deck outside: ${this.props.board.deck}`) }
          <View style={BoardStyleLeft} >
           <Cards
