@@ -26,18 +26,15 @@ export default class Board extends React.Component {
 }
 
 function Cards({deck,n,isJustDrawn}){
-  let styleDirection = TextStyleRight
+  let styleDirection = isJustDrawn ? TextStyleLeft : TextStyleRight;
   if (isJustDrawn){
-    if (n === 0){ return ''}
+    if (n === 0){return ''}
     deck = deck.slice(-n);
-    styleDirection = TextStyleLeft
   }
   else {
-    if (n > 0){
-      deck = deck.slice(0,-n);
-    }
+    deck = n === 0 ? deck : deck.slice(0,-n)
   }
-  return deck.map( card =>
+  return deck.map(card =>
     <Text
         style={styleDirection} key={card.toString()}>{card.toString()}
     </Text>
