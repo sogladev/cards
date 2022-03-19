@@ -6,7 +6,7 @@ import isValidNumOfCards from '../logic/validateInput'
 
 
 export default class InputNumberCards extends React.Component {
-    defaultValue = 10;
+    defaultValue = 5;
 
     state = {
         value: this.defaultValue,

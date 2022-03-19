@@ -21,7 +21,7 @@ export default class Card extends React.Component {
             <div className='cardWrapper'>
                 <div className='card' onClick={this.handleClick}>
                     <svg 
-                        viewBox="0 0 170 245 "
+                        viewBox="0 0 170 250 "
                         xmlns="http://www.w3.org/2000/svg"
                     >
                     <use xlinkHref={`${SvgCards}#${this.svgPostfix}`}/>
