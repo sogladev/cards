@@ -27,7 +27,6 @@ function drawCard(index, isFaceUp, isText, offsetY){
         <div class='card'>
             <svg 
                 viewBox="0 0 170 245 "
-                width="200"
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <use xlinkHref={`${SvgCards}#${svgPostfix}`} y={offsetY}/>

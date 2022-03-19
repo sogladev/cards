@@ -7,7 +7,10 @@ export default class Board extends React.Component {
     return (
       <View style={BoardColumns} >
         <View style={BoardStyleLeft} >
-          <Deck cardArray={this.props.deck} isFaceUp={false}/>
+          <Deck
+            cardArray={this.props.deck}
+            isFaceUp={this.props.isDeckFaceUp}
+          />
         </View>
         <View style={BoardStyleMiddle} >
           <Deck cardArray={this.props.hand} isFaceUp={true}/> 
@@ -21,26 +24,29 @@ export default class Board extends React.Component {
 }
 
 const BoardStyleLeft = {
-  flex: '12',
+  flex: '1',
   backgroundColor: '#3D9970', // darker olive
+  alignContent: 'center',
 }
 
 const BoardStyleMiddle = {
-  flex: '24',
+  flex: '1',
+  alignContent: 'center',
   backgroundColor: '#3D9970', // darker olive
 }
 
 const BoardStyleRight = {
-  flex: '24',
+  flex: '1',
   backgroundColor: '#3D9970', // darker olive
 }
 
 const BoardColumns = {
   flexDirection:'row',
   position: 'absolute',
+  alignContent: 'center',
   left:0,
   right:0,
-  top:50,
-  bottom:80,
+  top: '3em',
+  bottom: '4em',
 }
 

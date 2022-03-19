@@ -16,6 +16,7 @@ export default class Menu extends React.Component {
               name="Draw <n>" clickHandler={ this.handleClick }
             />
             <Button name="Shuffle deck" clickHandler={ this.handleClick }/>
+            <Button name="Flip deck" clickHandler={ this.handleClick }/>
             <Button name="New deck" clickHandler={ this.handleClick }/>
           </View>
       );
@@ -28,9 +29,9 @@ const MenuStyle = {
     bottom: 0,
     right: 0,
     left: 0,
-    height: 80,
-    paddingBottom: 5,
-    paddingTop: 5,
+    height: '4em',
+    paddingBottom: '0.5em',
+    paddingTop: '0.5em',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     backgroundColor: '#555555',

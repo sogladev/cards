@@ -7,6 +7,7 @@ export default function manipulateCardArray(obj, buttonName) {
        deck: new CardArray().fill(),
        hand: new CardArray(),
        board: new CardArray(),
+        isDeckFaceUp: obj.isDeckFaceUp,
     };
   }
 
@@ -27,6 +28,7 @@ export default function manipulateCardArray(obj, buttonName) {
         deck: obj.deck,
         hand: obj.hand,
         board: obj.board,
+        isDeckFaceUp: obj.isDeckFaceUp,
       };
   }
  
@@ -36,6 +38,17 @@ export default function manipulateCardArray(obj, buttonName) {
         deck: obj.deck.shuffle(),
         hand: obj.hand,
         board: obj.board,
+        isDeckFaceUp: obj.isDeckFaceUp,
+      };
+  }
+
+  if (buttonName === "Flip deck") {
+      console.log("Flip deck");
+      return {
+        deck: obj.deck,
+        hand: obj.hand,
+        board: obj.board,
+        isDeckFaceUp: !obj.isDeckFaceUp,
       };
   }
 }

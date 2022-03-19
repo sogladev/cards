@@ -11,6 +11,7 @@ export default class App extends React.Component {
         deck: new CardArray().fill(),
         hand: new CardArray(),
         board: new CardArray(),
+        isDeckfaceUp: false,
     };
 
     handleClick = buttonName => {
@@ -27,6 +28,7 @@ export default class App extends React.Component {
                     amountOnBoard={this.state.board.amountOfCards}
                 />
                 <Board
+                    isDeckFaceUp={this.state.isDeckFaceUp}
                     deck={this.state.deck}
                     hand={this.state.hand}
                     board={this.state.board}
