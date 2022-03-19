@@ -18,7 +18,6 @@ export default class App extends React.Component {
         this.setState(manipulateCardArray(this.state, buttonName));
     };
 
-
     render() {
         return (
             <div className="App">
@@ -32,6 +31,7 @@ export default class App extends React.Component {
                     deck={this.state.deck}
                     hand={this.state.hand}
                     board={this.state.board}
+                    clickHandler={this.handleClick}
                 />
                 <Menu clickHandler={this.handleClick}/>
             </div>

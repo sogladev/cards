@@ -5,23 +5,38 @@ export default class StatusBar extends React.Component {
   render() {
     return (
       <View style={StatusBarStyle.container}>
-        <View style={{flex: '4', justifyContent: 'center'}}>
-          <Text> Deck: {this.props.amountInDeck} </Text>
+        <View style={StatusColumn}>
+          <Text style={TextStyle}>
+            Deck: {this.props.amountInDeck}
+          </Text>
         </View>
-        <View style={{flex: '4', justifyContent: 'center'}}>
-          <Text> Hand: {this.props.amountInHand} </Text>
+        <View style={StatusColumn}>
+          <Text style={TextStyle}>
+            Hand: {this.props.amountInHand}
+          </Text>
         </View>
-        <View style={{flex: '4', justifyContent: 'center'}}>
-          <Text> Board: {this.props.amountOnBoard} </Text>
+        <View style={StatusColumn}>
+          <Text style={TextStyle}>
+            Board: {this.props.amountOnBoard}
+          </Text>
         </View>
       </View>
     );
   }
 }
 
+const StatusColumn = {
+  flex: '4',
+  justifyContent: 'center'
+}
+
+const TextStyle = {
+  color: '#fff',
+  fontSize: 'large',
+}
+
 const StatusBarStyle = {
   container: {
-    color: '#fff',
     height: '3em',
     flexDirection: 'row',
     backgroundColor: '#555555',

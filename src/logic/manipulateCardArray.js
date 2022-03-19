@@ -1,8 +1,8 @@
 import CardArray from './CardArray'
 
 export default function manipulateCardArray(obj, buttonName) {
-  console.log(`new manipulateCardArray: ${buttonName}`);
-  if (buttonName === "New deck") {
+  console.debug(`new manipulateCardArray: ${buttonName}`);
+  if (buttonName === "New") {
     return {
        deck: new CardArray().fill(),
        hand: new CardArray(),
@@ -10,10 +10,28 @@ export default function manipulateCardArray(obj, buttonName) {
         isDeckFaceUp: obj.isDeckFaceUp,
     };
   }
+  if (/^DrawIndex+/.test(buttonName)) {
+      const index = Number(buttonName.match(/[0-9]+/)[0])
+      console.debug(`draw card index ${index}`);
+      const amountInHand = obj.hand.amountOfCards
+      obj.hand.reverse()
+      for (let i=0; i < amountInHand; i++){
+        const dealtCard = obj.hand.deal()
+        obj.board.add(dealtCard)
+      }
+      const dealtCard = obj.deck.dealIndex(index);
+      obj.hand.add(dealtCard);
+      return {
+        deck: obj.deck,
+        hand: obj.hand,
+        board: obj.board,
+        isDeckFaceUp: obj.isDeckFaceUp,
+      };
+  }
 
   if (/^Draw+/.test(buttonName)) {
       const n = /[0-9]+/.test(buttonName) ? buttonName.match(/[0-9]+/)[0] : 1
-      console.log(`draw ${n} card(s)`);
+      console.debug(`draw ${n} card(s)`);
       const amountInHand = obj.hand.amountOfCards
       obj.hand.reverse()
       for (let i=0; i < amountInHand; i++){
@@ -32,8 +50,8 @@ export default function manipulateCardArray(obj, buttonName) {
       };
   }
  
-  if (buttonName === "Shuffle deck") {
-      console.log("Shuffle deck");
+  if (buttonName === "Shuffle") {
+      console.debug("Shuffle deck");
       return {
         deck: obj.deck.shuffle(),
         hand: obj.hand,
@@ -42,8 +60,8 @@ export default function manipulateCardArray(obj, buttonName) {
       };
   }
 
-  if (buttonName === "Flip deck") {
-      console.log("Flip deck");
+  if (buttonName === "Flip") {
+      console.debug("Flip deck");
       return {
         deck: obj.deck,
         hand: obj.hand,

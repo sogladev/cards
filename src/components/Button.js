@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default class Button extends React.Component {
 
     handleClick = () => {
@@ -15,9 +14,10 @@ export default class Button extends React.Component {
 }
 
 const ButtonStyle = {
-    alignSelf: 'stretch',
     color: '#fff',
-    backgroundColor: '#3D9970', // live
+    minWidth: '8em',
+    fontSize: 'large',
+    backgroundColor: '#3D9970', // olive
     borderRadius: 15,
 };
 

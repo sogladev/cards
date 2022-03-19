@@ -4,7 +4,7 @@ function isPositiveInteger(input) {
 }
 
 export default function isValidNumOfCards(input) {
-    console.log(`Validating input: ${input}`)
+    console.debug(`Validating input: ${input}`)
     if (isPositiveInteger(input)){
         const min = 1;
         const max = 56;

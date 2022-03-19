@@ -8,6 +8,7 @@ export default class Board extends React.Component {
       <View style={BoardColumns} >
         <View style={BoardStyleLeft} >
           <Deck
+            clickHandler={this.props.clickHandler}
             cardArray={this.props.deck}
             isFaceUp={this.props.isDeckFaceUp}
           />
@@ -53,6 +54,6 @@ const BoardColumns = {
   left:0,
   right:0,
   top: '3em',
-  bottom: '4em',
+  bottom: '4.5em',
 }
 

@@ -8,17 +8,12 @@ export default class CardArray {
 
     get isEmpty() {return this.cards.length <= 0};
 
-    reverse() {
-        this.cards.reverse()
-        return this
-    }
-
     fill(numOfJokers=0) {
         const numOfCards = 52 + numOfJokers
         for (let i=1; i<=numOfCards; i++){
             this.cards.push(i);
         }
-        console.log(
+        console.debug(
             `Filled CardArray with new total of ${this.cards.length} cards`
         );
         return this
@@ -31,12 +26,25 @@ export default class CardArray {
 
     deal() {
         if (this.isEmpty){
-            console.log(`The CardArray is empty!`);
+            console.debug(`The CardArray is empty!`);
             return
         }
         const dealtCard = this.cards.pop();
-        console.log(
-            `Dealt a card. The CardArray has ${this.cards.length} cards left`
+        console.debug(
+            `Dealt a card ${dealtCard}. The CardArray has ${this.cards.length} cards left`
+        );
+        return dealtCard;
+    }
+
+    dealIndex(value) {
+        if (this.isEmpty){
+            console.debug(`The CardArray is empty!`);
+            return
+        }
+        const index = this.cards.indexOf(value);
+        const dealtCard = this.cards.splice(index,1)[0]
+        console.debug(
+            `Dealt a card ${dealtCard}. The CardArray has ${this.cards.length} cards left`
         );
         return dealtCard;
     }
@@ -47,4 +55,10 @@ export default class CardArray {
         }
         return this
     }
+
+    reverse() {
+        this.cards.reverse()
+        return this
+    }
+
 }

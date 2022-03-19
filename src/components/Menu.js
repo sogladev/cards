@@ -12,12 +12,12 @@ export default class Menu extends React.Component {
       return (
           <View style={MenuStyle.container}>
             <Button name="Draw" clickHandler={ this.handleClick }/>
-            <InputNumberCards
+            <InputNumberCards 
               name="Draw <n>" clickHandler={ this.handleClick }
             />
-            <Button name="Shuffle deck" clickHandler={ this.handleClick }/>
-            <Button name="Flip deck" clickHandler={ this.handleClick }/>
-            <Button name="New deck" clickHandler={ this.handleClick }/>
+            <Button name="Shuffle" clickHandler={ this.handleClick }/>
+            <Button name="Flip" clickHandler={ this.handleClick }/>
+            <Button name="New" clickHandler={ this.handleClick }/>
           </View>
       );
   }
@@ -29,7 +29,7 @@ const MenuStyle = {
     bottom: 0,
     right: 0,
     left: 0,
-    height: '4em',
+    height: '4.5em',
     paddingBottom: '0.5em',
     paddingTop: '0.5em',
     flexDirection: 'row',

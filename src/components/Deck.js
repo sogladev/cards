@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import './card.css'
+import './deck.css'
 
 export default class Deck extends React.Component {
     render(){
@@ -9,6 +9,8 @@ export default class Deck extends React.Component {
         {this.props.cardArray.cards.map(
             (index, i) =>
              <Card
+                clickHandler={this.props.clickHandler}
+                key={index}
                 isFaceUp={this.props.isFaceUp}
                 index={index}
             />
