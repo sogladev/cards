@@ -33,6 +33,6 @@ const MenuStyle = {
     paddingTop: 5,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-     backgroundColor: '#AAAAAA',
+    backgroundColor: '#555555',
   },
 };

@@ -8,6 +8,11 @@ export default class CardArray {
 
     get isEmpty() {return this.cards.length <= 0};
 
+    reverse() {
+        this.cards.reverse()
+        return this
+    }
+
     fill(numOfJokers=0) {
         const numOfCards = 52 + numOfJokers
         for (let i=1; i<=numOfCards; i++){

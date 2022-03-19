@@ -392,14 +392,14 @@ export const db = [
 		svg : "joker_black",
 	},
 	{
-		index : 100,
+		index : 57,
 		color : "",
 		number : "back",
 		suit : "",
 		svg : "back",
 	},
 	{
-		index : 101,
+		index : 58,
 		color : "",
 		number : "reverse-back",
 		suit : "",

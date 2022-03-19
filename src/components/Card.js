@@ -1,45 +1,37 @@
 import React from "react";
-import { Text } from 'react-native';
 import SvgCards from '../../node_modules/svg-cards/svg-cards.svg';
 import { index2SVG } from '../logic/translateCardIndex';
+import './card.css'
 
 export default class Card extends React.Component {
     render(){
-        return ( this.props.isFaceUp ?
-            faceUp(this.props.index) : faceDown(this.props.index)
+        return (drawCard(
+            this.props.index,
+            this.props.isFaceUp,
+            this.props.isText,
+            this.props.offsetY
+            )
         )
     }
 }
 
-function drawCard(index){
-    const svgPostfix = index2SVG(index)
-    return (
-        <svg 
-            width="175"
-            height="250"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <use xlinkHref={`${SvgCards}#${svgPostfix}`}/>
-        </svg>
-    )
-}
 
-function faceUp(index,isText){
+function drawCard(index, isFaceUp, isText, offsetY){
+    const svgPostfix = isFaceUp ? index2SVG(index) : "back" 
     return (
         isText ?
-         <Text key={index} style={TextStyle}> {index} </Text>
-         : drawCard(index)
+        <div>
+            <p key={index}> {svgPostfix} </p>
+        </div>
+            : 
+        <div class='card'>
+            <svg 
+                viewBox="0 0 170 245 "
+                width="200"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <use xlinkHref={`${SvgCards}#${svgPostfix}`} y={offsetY}/>
+            </svg>
+        </div>
     )
 }
-
-function faceDown(index){
-    return (
-        <p key={index}> faceDown </p>
-    )
-}
-
-const TextStyle = {
-    width: '50%',
-    alignItems: 'stretch',
-    backgroundColor: '#DDDDDD', // silver
-};

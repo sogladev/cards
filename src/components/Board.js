@@ -21,26 +21,26 @@ export default class Board extends React.Component {
 }
 
 const BoardStyleLeft = {
-  flex: '11',
-    backgroundColor: '#329062', // darker olive
+  flex: '12',
+  backgroundColor: '#3D9970', // darker olive
 }
 
 const BoardStyleMiddle = {
   flex: '24',
-    backgroundColor: '#2ECC40', // green
+  backgroundColor: '#3D9970', // darker olive
 }
 
 const BoardStyleRight = {
   flex: '24',
-    backgroundColor: '#01FF70', // lime
+  backgroundColor: '#3D9970', // darker olive
 }
 
 const BoardColumns = {
-    flexDirection:'row',
-    position: 'absolute',
-    left:0,
-    right:0,
-    top:50,
-    bottom:80,
+  flexDirection:'row',
+  position: 'absolute',
+  left:0,
+  right:0,
+  top:50,
+  bottom:80,
 }
 

@@ -14,6 +14,7 @@ export default function manipulateCardArray(obj, buttonName) {
       const n = /[0-9]+/.test(buttonName) ? buttonName.match(/[0-9]+/)[0] : 1
       console.log(`draw ${n} card(s)`);
       const amountInHand = obj.hand.amountOfCards
+      obj.hand.reverse()
       for (let i=0; i < amountInHand; i++){
         const dealtCard = obj.hand.deal()
         obj.board.add(dealtCard)

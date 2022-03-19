@@ -17,7 +17,7 @@ export default class Button extends React.Component {
 const ButtonStyle = {
     alignSelf: 'stretch',
     color: '#fff',
-    backgroundColor: '#28fb43',
+    backgroundColor: '#3D9970', // live
     borderRadius: 15,
 };
 

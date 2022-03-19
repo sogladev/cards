@@ -5,13 +5,13 @@ export default class StatusBar extends React.Component {
   render() {
     return (
       <View style={StatusBarStyle.container}>
-        <View style={{flex: '4'}}>
+        <View style={{flex: '4', justifyContent: 'center'}}>
           Cards remaining in deck: {this.props.amountInDeck}
         </View>
-        <View style={{flex: '12'}}>
+        <View style={{flex: '12', justifyContent: 'center'}}>
           Cards in hand: {this.props.amountInHand}
         </View>
-        <View style={{flex: '11'}}>
+        <View style={{flex: '11', justifyContent: 'center'}}>
           Cards on board: {this.props.amountOnBoard}
         </View>
       </View>
@@ -21,10 +21,9 @@ export default class StatusBar extends React.Component {
 
 const StatusBarStyle = {
   container: {
-     height: 50,
-    paddingTop: 0,
-     flexDirection: 'row',
-     justifyContent: 'space-evenly',
-     backgroundColor: '#AAAAAA',
+    color: '#fff',
+    height: 50,
+    flexDirection: 'row',
+    backgroundColor: '#555555',
     },
 }
