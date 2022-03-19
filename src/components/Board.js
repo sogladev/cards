@@ -13,10 +13,16 @@ export default class Board extends React.Component {
           />
         </View>
         <View style={BoardStyleMiddle} >
-          <Deck cardArray={this.props.hand} isFaceUp={true}/> 
+          <Deck
+            cardArray={this.props.hand}
+            isFaceUp={true}
+          />
         </View>
         <View style={BoardStyleRight} >
-          <Deck cardArray={this.props.board} isFaceUp={true}/> 
+          <Deck
+            cardArray={this.props.board}
+            isFaceUp={true}
+          />
         </View>
       </View>
     );

@@ -1,18 +1,18 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 
 export default class StatusBar extends React.Component {
   render() {
     return (
       <View style={StatusBarStyle.container}>
         <View style={{flex: '4', justifyContent: 'center'}}>
-          Deck: {this.props.amountInDeck}
+          <Text> Deck: {this.props.amountInDeck} </Text>
         </View>
         <View style={{flex: '4', justifyContent: 'center'}}>
-          Hand: {this.props.amountInHand}
+          <Text> Hand: {this.props.amountInHand} </Text>
         </View>
         <View style={{flex: '4', justifyContent: 'center'}}>
-          Board: {this.props.amountOnBoard}
+          <Text> Board: {this.props.amountOnBoard} </Text>
         </View>
       </View>
     );
