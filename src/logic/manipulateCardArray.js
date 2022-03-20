@@ -2,9 +2,10 @@ import CardArray from './CardArray'
 
 export default function manipulateCardArray(obj, buttonName) {
   console.debug(`new manipulateCardArray: ${buttonName}`);
-  if (buttonName === "New") {
+  if (/^New+/.test(buttonName)) {
+    const n = Number(buttonName.match(/[0-9]+/)[0])
     return {
-       deck: new CardArray().fill(),
+       deck: new CardArray().fill(n),
        hand: new CardArray(),
        board: new CardArray(),
         isDeckFaceUp: obj.isDeckFaceUp,

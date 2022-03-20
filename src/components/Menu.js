@@ -13,11 +13,21 @@ export default class Menu extends React.Component {
           <View style={MenuStyle.container}>
             <Button name="Draw" clickHandler={ this.handleClick }/>
             <InputNumberCards 
-              name="Draw <n>" clickHandler={ this.handleClick }
+              name="Draw"
+              default={5}
+              min={1}
+              max={56}
+              clickHandler={ this.handleClick }
             />
             <Button name="Shuffle" clickHandler={ this.handleClick }/>
             <Button name="Flip" clickHandler={ this.handleClick }/>
-            <Button name="New" clickHandler={ this.handleClick }/>
+            <InputNumberCards 
+              name="New with jokers"
+              default={0}
+              min={0}
+              max={12}
+              clickHandler={ this.handleClick }
+            />
           </View>
       );
   }

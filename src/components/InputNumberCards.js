@@ -6,14 +6,14 @@ import isValidNumOfCards from '../logic/validateInput'
 
 
 export default class InputNumberCards extends React.Component {
-    defaultValue = 5;
+    defaultValue = this.props.default;
 
     state = {
         value: this.defaultValue,
     }
 
     get buttonName() {
-        return `Draw <${this.state.value}>`
+        return `${this.props.name} <${this.state.value}>`
     }
 
     handleClick = () => {
@@ -39,7 +39,7 @@ export default class InputNumberCards extends React.Component {
                 <NumberPicker 
                     onChange={this.handleChange}
                     defaultValue={this.defaultValue}
-                    step={1} min={1} max={56}
+                    step={1} min={this.props.min} max={this.props.max}
                 />
             </View>
         );

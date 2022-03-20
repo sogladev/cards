@@ -372,34 +372,99 @@ export const db = [
 	},
 	{
 		index : 54,
-		color : "red",
-		number : "JK",
-		suit : "Diamond",
-		svg : "joker_red",
-	},
-	{
-		index : 55,
-		color : "black",
-		number : "JK",
-		suit : "Club",
-		svg : "joker_black",
-	},
-	{
-		index : 56,
 		color : "black",
 		number : "JK",
 		suit : "Spade",
 		svg : "joker_black",
 	},
 	{
+		index : 55,
+		color : "red",
+		number : "JK",
+		suit : "Diamond",
+		svg : "joker_red",
+	},
+	{
+		index : 56,
+		color : "black",
+		number : "JK",
+		suit : "Club",
+		svg : "joker_black",
+	},
+	{
 		index : 57,
+		color : "red",
+		number : "JK",
+		suit : "Heart",
+		svg : "joker_red",
+	},
+	{
+		index : 58,
+		color : "black",
+		number : "JK",
+		suit : "Spade",
+		svg : "joker_black",
+	},
+	{
+		index : 59,
+		color : "red",
+		number : "JK",
+		suit : "Diamond",
+		svg : "joker_red",
+	},
+	{
+		index : 60,
+		color : "black",
+		number : "JK",
+		suit : "Club",
+		svg : "joker_black",
+	},
+	{
+		index : 61,
+		color : "red",
+		number : "JK",
+		suit : "Heart",
+		svg : "joker_red",
+	},
+	{
+		index : 62,
+		color : "black",
+		number : "JK",
+		suit : "Spade",
+		svg : "joker_black",
+	},
+	{
+		index : 63,
+		color : "red",
+		number : "JK",
+		suit : "Diamond",
+		svg : "joker_red",
+	},
+	{
+		index : 64,
+		color : "black",
+		number : "JK",
+		suit : "Club",
+		svg : "joker_black",
+	},
+
+
+
+
+
+
+
+
+	
+	{
+		index : 100,
 		color : "",
 		number : "back",
 		suit : "",
 		svg : "back",
 	},
 	{
-		index : 58,
+		index : 101,
 		color : "",
 		number : "reverse-back",
 		suit : "",
