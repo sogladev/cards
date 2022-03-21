@@ -33,7 +33,6 @@ export default class Board extends React.Component {
 const BoardStyleLeft = {
   flex: '1',
   backgroundColor: '#3D9970', // darker olive
-  alignContent: 'center',
 }
 
 const BoardStyleMiddle = {
@@ -48,9 +47,9 @@ const BoardStyleRight = {
 }
 
 const BoardColumns = {
+  display: 'flex',
   flexDirection:'row',
   position: 'absolute',
-  alignContent: 'center',
   left:0,
   right:0,
   top: '3em',

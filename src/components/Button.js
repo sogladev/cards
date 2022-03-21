@@ -15,7 +15,6 @@ export default class Button extends React.Component {
 
 const ButtonStyle = {
     color: '#fff',
-    minWidth: '8em',
     fontSize: 'large',
     backgroundColor: '#3D9970', // olive
     borderRadius: 15,

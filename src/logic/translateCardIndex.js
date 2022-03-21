@@ -447,15 +447,6 @@ export const db = [
 		suit : "Club",
 		svg : "joker_black",
 	},
-
-
-
-
-
-
-
-
-	
 	{
 		index : 100,
 		color : "",

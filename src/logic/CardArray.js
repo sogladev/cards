@@ -31,7 +31,8 @@ export default class CardArray {
         }
         const dealtCard = this.cards.pop();
         console.debug(
-            `Dealt a card ${dealtCard}. The CardArray has ${this.cards.length} cards left`
+            `Dealt a card ${dealtCard}. The CardArray has\
+            ${this.cards.length} cards left`
         );
         return dealtCard;
     }
@@ -44,7 +45,8 @@ export default class CardArray {
         const index = this.cards.indexOf(value);
         const dealtCard = this.cards.splice(index,1)[0]
         console.debug(
-            `Dealt a card ${dealtCard}. The CardArray has ${this.cards.length} cards left`
+            `Dealt a card ${dealtCard}. The CardArray\
+            has ${this.cards.length} cards left`
         );
         return dealtCard;
     }
