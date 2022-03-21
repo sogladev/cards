@@ -4,6 +4,8 @@ A simple card drawing web app created with React hosted in github pages.
 
 interactive demo [https://soglahash.github.io/cards/](https://soglahash.github.io/cards/)
 
+![demo-gif](./demo.gif)
+
 ## Features
 
 * Create a deck of 52 with optional (up to 12) jokers cards
