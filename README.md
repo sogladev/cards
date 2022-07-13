@@ -50,7 +50,7 @@ Build cmd
 ```
 npm run build && cp -R ./build/* ../MyApp/www/ && cd ../MyApp/ && cordova build android && cordova run android ; cd -
 ```
-Android 10.0
+Pixel4 XL Android 11.0
 ![screenshot mobile](./android.png)
 
 ## IOS
