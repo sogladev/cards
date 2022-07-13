@@ -1,14 +1,44 @@
 {
   "files": {
-    "main.css": "/cards/static/css/main.2acad6d9.css",
-    "main.js": "/cards/static/js/main.2445cefa.js",
-    "static/media/svg-cards.svg": "/cards/static/media/svg-cards.218fd87b282c15dbca488d705ba056bd.svg",
-    "index.html": "/cards/index.html",
-    "main.2acad6d9.css.map": "/cards/static/css/main.2acad6d9.css.map",
-    "main.2445cefa.js.map": "/cards/static/js/main.2445cefa.js.map"
+    "main.css": "./static/css/main.69484269.css",
+    "main.js": "./static/js/main.bc9c81ed.js",
+    "static/media/spade_jack.png": "./static/media/spade_jack.0cc6c6ccbcd3ae9c7ff7.png",
+    "static/media/heart_queen.png": "./static/media/heart_queen.c66bd22eca2db89857f3.png",
+    "static/media/club_king.png": "./static/media/club_king.cd67522afa270500d466.png",
+    "static/media/spade_king.png": "./static/media/spade_king.f804c068cc2f3885b7c8.png",
+    "static/media/diamond_king.png": "./static/media/diamond_king.1abafcafac8ab2ac7759.png",
+    "static/media/club_jack.png": "./static/media/club_jack.0f2345e3947841d4c53d.png",
+    "static/media/spade_queen.png": "./static/media/spade_queen.e580755f2a3313773583.png",
+    "static/media/diamond_queen.png": "./static/media/diamond_queen.db07ad7f4f938d849b20.png",
+    "static/media/heart_jack.png": "./static/media/heart_jack.0f3eb6292ed0ad858ee7.png",
+    "static/media/heart_king.png": "./static/media/heart_king.a57571e515a680e0ad3a.png",
+    "static/media/club_queen.png": "./static/media/club_queen.752161e462abfc2ab6bf.png",
+    "static/media/diamond_jack.png": "./static/media/diamond_jack.d69773b3f8408176fd81.png",
+    "static/media/back-green.png": "./static/media/back-green.51e5c2322bdb8a7235e4.png",
+    "static/media/back-purple.png": "./static/media/back-purple.50c5c7d5a7941a47c5d0.png",
+    "static/media/back-navy.png": "./static/media/back-navy.62028b3ea7e0152dd3cd.png",
+    "static/media/back-maroon.png": "./static/media/back-maroon.31042b8e4275c2fbafb8.png",
+    "static/media/back-olive.png": "./static/media/back-olive.fd2359377a5365549301.png",
+    "static/media/back-teal.png": "./static/media/back-teal.e9d346d71c0b2c56e349.png",
+    "static/media/back-000.png": "./static/media/back-000.f7ff376af1be6e559a28.png",
+    "static/media/back-0062ff.png": "./static/media/back-0062ff.f7ff376af1be6e559a28.png",
+    "static/media/back-blue.png": "./static/media/back-blue.b56a1db8ae04f326079b.png",
+    "static/media/back-red.png": "./static/media/back-red.b47da91f198b99a11e8d.png",
+    "static/media/back-lime.png": "./static/media/back-lime.e1eb835d3a8ea9fc7bf8.png",
+    "static/media/back-fuchsia.png": "./static/media/back-fuchsia.e6cfa448da35e8dbac0b.png",
+    "static/media/back-yellow.png": "./static/media/back-yellow.8d6e59ec0272a58433f1.png",
+    "static/media/back-aqua.png": "./static/media/back-aqua.6bc2a4fb77b557a06d61.png",
+    "static/media/joker_red.png": "./static/media/joker_red.9e3c852623abe6457ade.png",
+    "static/media/joker_black.png": "./static/media/joker_black.56f36f209dbc02f07864.png",
+    "static/media/back.png": "./static/media/back.9833e881f03e2370fc65.png",
+    "static/media/back-gray.png": "./static/media/back-gray.3ebfbbde77d5a434099f.png",
+    "static/media/back-silver.png": "./static/media/back-silver.ca368b7501b56ee2971f.png",
+    "index.html": "./index.html",
+    "main.69484269.css.map": "./static/css/main.69484269.css.map",
+    "main.bc9c81ed.js.map": "./static/js/main.bc9c81ed.js.map"
   },
   "entrypoints": [
-    "static/css/main.2acad6d9.css",
-    "static/js/main.2445cefa.js"
+    "static/css/main.69484269.css",
+    "static/js/main.bc9c81ed.js"
   ]
 }
