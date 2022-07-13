@@ -12,6 +12,7 @@ export default class App extends React.Component {
         hand: new CardArray(),
         board: new CardArray(),
         isDeckFaceUp: false,
+        isBoardVisible: true,
     };
 
     handleClick = buttonName => {
@@ -31,9 +32,13 @@ export default class App extends React.Component {
                     deck={this.state.deck}
                     hand={this.state.hand}
                     board={this.state.board}
+                    isBoardVisible={this.state.isBoardVisible}
                     clickHandler={this.handleClick}
                 />
-                <Menu clickHandler={this.handleClick}/>
+                <Menu
+                    clickHandler={this.handleClick}
+                    isBoardVisible={this.state.isBoardVisible}
+                />
             </div>
       );
     }

@@ -5,10 +5,11 @@ export default function manipulateCardArray(obj, buttonName) {
   if (/^New+/.test(buttonName)) {
     const n = Number(buttonName.match(/[0-9]+/)[0])
     return {
-       deck: new CardArray().fill(n),
-       hand: new CardArray(),
-       board: new CardArray(),
-        isDeckFaceUp: obj.isDeckFaceUp,
+      deck: new CardArray().fill(n),
+      hand: new CardArray(),
+      board: new CardArray(),
+      isDeckFaceUp: obj.isDeckFaceUp,
+      isBoardVisible: obj.isBoardVisible,
     };
   }
   if (/^DrawIndex+/.test(buttonName)) {
@@ -27,6 +28,7 @@ export default function manipulateCardArray(obj, buttonName) {
         hand: obj.hand,
         board: obj.board,
         isDeckFaceUp: obj.isDeckFaceUp,
+        isBoardVisible: obj.isBoardVisible,
       };
   }
 
@@ -48,6 +50,7 @@ export default function manipulateCardArray(obj, buttonName) {
         hand: obj.hand,
         board: obj.board,
         isDeckFaceUp: obj.isDeckFaceUp,
+        isBoardVisible: obj.isBoardVisible,
       };
   }
  
@@ -58,6 +61,7 @@ export default function manipulateCardArray(obj, buttonName) {
         hand: obj.hand,
         board: obj.board,
         isDeckFaceUp: obj.isDeckFaceUp,
+        isBoardVisible: obj.isBoardVisible,
       };
   }
 
@@ -68,6 +72,17 @@ export default function manipulateCardArray(obj, buttonName) {
         hand: obj.hand,
         board: obj.board,
         isDeckFaceUp: !obj.isDeckFaceUp,
+        isBoardVisible: obj.isBoardVisible,
+      };
+  }
+  if (buttonName === "Hide Board" || buttonName === "Show Board") {
+      console.debug("Hide or Show Board");
+      return {
+        deck: obj.deck,
+        hand: obj.hand,
+        board: obj.board,
+        isDeckFaceUp: obj.isDeckFaceUp,
+        isBoardVisible: !obj.isBoardVisible,
       };
   }
 }

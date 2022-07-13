@@ -28,6 +28,10 @@ export default class Menu extends React.Component {
               max={12}
               clickHandler={ this.handleClick }
             />
+            <Button
+              name={ this.props.isBoardVisible ? "Hide Board" : "Show Board" }
+              clickHandler={ this.handleClick }
+            />
           </View>
       );
   }

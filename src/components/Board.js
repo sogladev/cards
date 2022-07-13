@@ -19,12 +19,20 @@ export default class Board extends React.Component {
             isFaceUp={true}
           />
         </View>
-        <View style={BoardStyleRight} >
-          <Deck
-            cardArray={this.props.board}
-            isFaceUp={true}
-          />
-        </View>
+        {(() => {
+          if (this.props.isBoardVisible){
+            return (
+              <View style={BoardStyleRight} >
+              <Deck
+                cardArray={this.props.board}
+                isFaceUp={true}
+              />
+              </View>)
+          }
+          else {
+            return
+          }
+        })()}
       </View>
     );
   }
