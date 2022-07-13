@@ -2,6 +2,8 @@ import React from 'react';
 import { View } from 'react-native';
 import Button from './Button';
 import NumberPicker from "react-widgets/NumberPicker";
+import "react-widgets/scss/styles.scss";
+import '../scss/style.scss';
 import isValidNumOfCards from '../logic/validateInput'
 
 
@@ -31,7 +33,7 @@ export default class InputNumberCards extends React.Component {
 
     render() {
         return (
-            <View>
+            <View style={{width: '12em'}}>
                 <Button
                 name={this.buttonName}
                 clickHandler={this.handleClick}
