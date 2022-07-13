@@ -81,7 +81,14 @@ Cordova
 ```
 2022-07-13 17:40:42.934 5168-5223/io.cordova.hellocordova E/va.hellocordov: Failed to open file '/data/data/io.cordova.hellocordova/code_cache/.overlay/base.apk/assets/www/static/media/svg-cards.218fd87b282c15dbca488d705ba056bd.svg': No such file or directory
 ```
+
+Android 11.0
 ![screenshot mobile](./mobile.png)
+
+Switch SVG to PNG versions fixed SVG rendering issue. Now we need scaling..
+
+Android 10.0
+![screenshot mobile](./scaling.png)
 
 
 
