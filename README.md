@@ -32,3 +32,31 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# Build Mobile Android 
+Options
+1. create react-native app. Requires rewriting code 👎
+1. convert react to react-native. No need to rewrite any code 👍
+
+## convert react to react-native with [Cordova](https://cordova.apache.org/#getstarted)
+from: https://stackoverflow.com/questions/35463547/what-is-the-quickest-way-to-convert-a-react-app-to-react-native
+TLDR;
+```
+create Cordova app, add android platform and build. open project with android studio and simulate with virtual device.
+```
+Change `"homepage": ".",` in `package.json` before building 
+
+Build cmd
+```
+npm run build && cp -R ./build/* ../MyApp/www/ && cd ../MyApp/ && cordova build android && cordova run android ; cd -
+```
+Android 10.0
+![screenshot mobile](./android.png)
+
+## IOS
+Todo with QEMU VM, xcode
+https://oneclick-macos-simple-kvm.notaperson535.is-a.dev/docs/start-here/
+
+
+
+
