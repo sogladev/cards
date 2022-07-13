@@ -1,5 +1,5 @@
 import React from "react";
-import { index2name as index2name } from '../logic/translateCardIndex';
+import { index2name } from '../logic/translateCardIndex';
 import './card.css'
 import { Dimensions } from 'react-native';
 
@@ -7,7 +7,7 @@ const w_to_h_ratio = 169/244
 
 function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    r.keys().map((item) => ( images[item.replace('./', '')] = r(item)));
     return images;
   }
   
@@ -42,6 +42,7 @@ export default class Card extends React.Component {
                 <div className='card' onClick={this.handleClick}>
                 <img
                     style={ this.style }
+                    alt={this.filePostfix}
                     src={images[`${this.filePostfix}.png`]}
                 />
                 </div>
