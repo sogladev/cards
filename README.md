@@ -36,7 +36,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 # Build Mobile Android 
 Options
 1. create react-native app. Requires rewriting code 👎
-1. convert react to react-native. No need to rewrite any code 👍
+1. convert react to native container. No need to rewrite any code 👍
 
 ## convert react to react-native with [Cordova](https://cordova.apache.org/#getstarted)
 from: https://stackoverflow.com/questions/35463547/what-is-the-quickest-way-to-convert-a-react-app-to-react-native
@@ -55,7 +55,9 @@ Pixel4 XL Android 11.0
 
 ## IOS
 Todo with QEMU VM, xcode
-https://oneclick-macos-simple-kvm.notaperson535.is-a.dev/docs/start-here/
+1. https://oneclick-macos-simple-kvm.notaperson535.is-a.dev/docs/start-here/
+
+2. https://github.com/sickcodes/Docker-OSX
 
 
 
