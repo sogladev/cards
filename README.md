@@ -2,8 +2,6 @@
 # Draw Cards
 A simple card drawing web app created with React hosted in github pages.
 
-interactive demo [https://jellemeeus.github.io/cards/](https://jellemeeus.github.io/cards/)
-
 ![demo-gif](./demo.gif)
 
 ## Features
